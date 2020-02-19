@@ -11,7 +11,7 @@ server.use(express.urlencoded({ extended: true }))
 
 // configurar a conexão com o banco de dados
 const Pool = require('pg').Pool
-const db = new Pool()({
+const db = new Pool({
   user: 'mdev',
   password: 'mdev',
   host: 'localhost',
@@ -69,7 +69,7 @@ server.post("/", function(req, res){
   })
   */
 
-  if (name == "" || email = "" || blood == ""){
+  if (name == "" || email == "" || blood == ""){
     return res.send("Todos os campos são obrigatórios.")
   }
 
