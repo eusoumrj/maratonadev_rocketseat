@@ -9,7 +9,8 @@ server.use(express.static('public'))
 // configurando a template engine
 const nunjucks = require('nunjucks')
 nunjucks.configure("./", {
-  express: server
+  express: server,
+  noCache: true //boolean
 })
 
 // array - lista de doadores
