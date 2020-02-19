@@ -15,26 +15,26 @@ nunjucks.configure("./", {
 // array - lista de doadores
 const donors = [
   {
-    name = 'Diego Fernandes',
+    name: "Diego Fernandes",
     blood: "AB+"
   },
   {
-    name = 'Cleiton Souza',
+    name: "Cleiton Souza",
     blood: "B+"
   },
   {
-    name = 'Robson Marques',
+    name: "Robson Marques",
     blood: "O+"
   },
   {
-    name = 'Mayk Brito',
+    name: "Mayk Brito",
     blood: "A-"
   },
 ]
 
 // configurar a apresentação da página
 server.get("/", function(req, res){
-  return res.render("index.html")
+  return res.render("index.html", {donors})
 })
 
 // ligar o servidor e permitir o acesso na porta 3000
