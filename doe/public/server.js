@@ -12,6 +12,26 @@ nunjucks.configure("./", {
   express: server
 })
 
+// array - lista de doadores
+const donors = [
+  {
+    name = 'Diego Fernandes',
+    blood: "AB+"
+  },
+  {
+    name = 'Cleiton Souza',
+    blood: "B+"
+  },
+  {
+    name = 'Robson Marques',
+    blood: "O+"
+  },
+  {
+    name = 'Mayk Brito',
+    blood: "A-"
+  },
+]
+
 // configurar a apresentação da página
 server.get("/", function(req, res){
   return res.render("index.html")
